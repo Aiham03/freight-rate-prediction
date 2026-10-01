@@ -1,0 +1,9 @@
+subset,model,MAE,RMSE,MAPE_%,MedAPE_%
+all_rows,baseline_rpm_table,155.04,641.56,6.79,4.08
+all_rows,final (gbm + daily effect),100.53,626.05,4.37,1.69
+all_rows,final_but_keep_outliers,145.05,636.08,6.35,3.1
+all_rows,gbm_market_only_no_calendar,146.89,640.17,6.24,3.78
+clean_rows,baseline_rpm_table,102.22,138.39,4.5,4.03
+clean_rows,final (gbm + daily effect),47.12,71.18,2.03,1.66
+clean_rows,final_but_keep_outliers,92.3,145.88,4.02,3.04
+clean_rows,gbm_market_only_no_calendar,94.08,127.66,3.99,3.73

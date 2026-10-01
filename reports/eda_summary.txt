@@ -1,0 +1,12 @@
+train rows 48,000 | 2025-01-01..2025-10-31
+valid rows 12,000 | 2025-11-01..2025-12-31
+duplicate load_id / duplicate feature rows: 0 / 0
+[train] missing weight 300, missing market_index 374, negative weight 292, weight at 47,500 cap 1204
+[valid] missing weight 165, missing market_index 249, negative weight 145, weight at 47,500 cap 301
+cities only in validation: ['Allentown', 'Charlotte', 'Chicago', 'Jackson', 'Knoxville', 'Laredo', 'Norfolk', 'San Diego'] -> 1447 validation rows (12.1%)
+market_index mean train 1.083 vs valid 0.927
+market_index within-day std 0.025 vs across-day std 0.167
+label outliers (|log resid|>0.35): 682 (1.42%); low 338, high 343; median ratio low 0.29, high 3.37
+residual std on clean rows: 0.0484 (log units)
+daily effect: beta(lmi_roll7)=0.152, ramp=[-0.0399  0.0921], levels={'2025Q1': -0.0392, '2025Q2': -0.0221, '2025Q3': -0.0101, '2025Q4': 0.0188}
+weight band mean log-residual (should be ~0 after model): (0, 15000]: +0.002, (15000, 20000]: +0.002, (20000, 25000]: +0.002, (25000, 30000]: +0.001, (30000, 35000]: -0.000, (35000, 40000]: -0.001, (40000, 47499]: -0.001, (47499, 47501]: -0.001
