@@ -44,3 +44,12 @@ validation_predictions.csv, scorer_results/candidate_december.png   deliverables
   - The two parts are fitted by backfitting, and a smearing correction is applied when converting back from log.
   - Day-level effects are kept out of the trees because trees cannot extrapolate to Nov–Dec. When trees were given day-level market features, they used them as a proxy for the calendar.
 - **Validation.** Rolling-origin time splits with a 2-month horizon, built to match the real task (first month of the quarter known, next two months predicted), plus a stress fold across a quarter boundary and a cold-city holdout. Mean backtest MAPE on clean labels is about 2.0%, versus 4.5% for a rate-card baseline.
+
+## Use of AI tools
+
+I wrote the code and the modelling approach. I used Claude Code (Anthropic) for pre-submission testing and repo setup:
+
+- Ran `score.py` on both deliverables, and ran the full pipeline (`run_all.sh`) from scratch in a clean environment to confirm the outputs reproduce exactly.
+- Reviewed the code for bugs and target leakage, and cross-checked the numbers in the report against the CSV outputs.
+- Suggested two wording changes in `scripts/make_report.py`: a more precise cold-city comparison and a sentence stating the main December assumption. The report was regenerated afterwards.
+- Added `.gitattributes` so the PDF and `run_all.sh` keep the correct line endings.
